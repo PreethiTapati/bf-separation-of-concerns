@@ -43,9 +43,13 @@
 
                 <script id="dom-manipulation-script">
                     'use strict';
-                    debugger;
+                    //debugger;
+                const actualList = document.getElementById('actual').querySelector('ul');
+                    const firstListItem = actualList.querySelector('li');
 
-                    // write me! (... without using cloneNode, that's kind of cheating)
+                    // Change the text content of the first <li> element
+                    firstListItem.innerText = 'robots';
+                   
                 </script>
             </div>
 

@@ -11,7 +11,14 @@ console.log(ulEl.nodeName + ' (before)', ulEl.cloneNode(true));
 
 // --- write some code ---
 
-// --- --- --- --- --- ---
+// remove the <p> element
+const pEl = ulEl.getElementsByTagName('p')[0];
+ulEl.removeChild(pEl);
+
+ulEl.children[0].innerHTML = 'toad'
+ulEl.children[1].innerHTML = 'frog';
+ulEl.children[2].innerHTML = 'salamander';
+
 
 console.log(ulEl.nodeName + ' (after)', ulEl.cloneNode(true));
 

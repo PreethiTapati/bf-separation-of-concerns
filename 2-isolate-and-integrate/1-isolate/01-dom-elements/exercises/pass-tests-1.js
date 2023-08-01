@@ -1,5 +1,10 @@
 'use strict';
 
+const element = document.createElement('input');
+
+element.setAttribute('placeholder', 'enter your username');
+element.setAttribute('class', 'auth-field'); 
+
 // the assertions are correct!  write code above to pass them
 console.assert(element.nodeName === 'INPUT', 'Test 1: nodeName');
 console.assert(

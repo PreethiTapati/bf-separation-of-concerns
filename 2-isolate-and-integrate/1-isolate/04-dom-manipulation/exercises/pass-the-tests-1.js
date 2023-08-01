@@ -9,12 +9,21 @@ divEl.innerHTML = `
 console.log(divEl.nodeName + ' (before)', divEl.cloneNode(true));
 
 // --- write some code ---
-//  replace the <p>
-//  insert something before the <section>
-//  remove the <h1>
-//  append something to the end
 
-// --- --- --- --- --- ---
+//  replace the <p>
+const p = divEl.querySelector('p');
+p.replaceWith(document.createElement('nav')); 
+
+//  insert something before the <section>
+const section = divEl.querySelector('section');
+section.before(document.createElement('h2'));
+
+//  remove the <h1>
+const h1 = divEl.querySelector('h1'); 
+h1.remove();
+
+//  append something to the end
+divEl.append(document.createElement('p'));
 
 console.log(divEl.nodeName + ' (after)', divEl.cloneNode(true));
 

@@ -1,6 +1,5 @@
 'use strict';
 
-// fill in the _s
 
 const buttonEl = document.createElement('button');
 buttonEl.innerHTML = 'log in';
@@ -20,7 +19,7 @@ const loginHandler = () => {
 };
 
 // add the event listener to the button so a user can login
-_;
+buttonEl.addEventListener('click', loginHandler);
 
 // "click" the button once
 const clickEvent1 = new Event('click');

@@ -1,25 +1,25 @@
 'use strict';
 
 const actual = (linksData) => {
-    const divEl = document.createElement('_');
+    const divEl = document.createElement('div');
 
-    const h3El = document.createElement('_');
-    h3El.textContent = _;
+    const h3El = document.createElement('h3');
+    h3El.textContent = 'heading';
     divEl.appendChild(h3El);
 
-    const ulEl = document.createElement('_');
-    for (const key in _) {
-        const liEl = document.createElement('_');
+    const ulEl = document.createElement('ul');
+    for (const key in ulEl) {
+        const liEl = document.createElement('li');
 
-        const aEl = document.createElement('_');
+        const aEl = document.createElement('a');
         aEl.textContent = key;
-        aEl.href = linksData.links[_];
+        aEl.href = linksData.links[key];
         aEl.target = '_blank';
-        _.appendChild(_);
+        liEl.appendChild(aEl);
 
-        _.appendChild(_);
+        ulEl.appendChild(liEl);
     }
-    _.appendChild(_);
+    divEl.appendChild(ulEl);
 
     return divEl;
 };

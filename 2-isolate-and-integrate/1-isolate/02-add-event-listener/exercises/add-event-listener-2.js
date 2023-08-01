@@ -1,12 +1,11 @@
 'use strict';
 
-// fill in the _s
 
 const buttonEl = document.createElement('button');
 buttonEl.innerHTML = 'log in';
 console.log(buttonEl.nodeName, buttonEl.cloneNode(true));
 
-const _ = () => {
+const authenticationHandler = () => {
     const username = prompt('enter your user name');
     if (username === null) {
         return;
@@ -19,12 +18,13 @@ const _ = () => {
     alert(`welcome, ${username}`);
 };
 
+// add the event listener to the button so a user can authenicate
 buttonEl.addEventListener('hover', authenticationHandler);
 
 // "hover" over the button once
-const clickEvent1 = new Event(_);
+const clickEvent1 = new Event('click');
 buttonEl.dispatchEvent(clickEvent1);
 
 // "hover" over the button again
-const clickEvent2 = new Event(_);
+const clickEvent2 = new Event('click');
 buttonEl.dispatchEvent(clickEvent2);

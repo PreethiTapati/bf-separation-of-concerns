@@ -41,9 +41,19 @@
 
                 <script id="dom-manipulation-script">
                     'use strict';
-                    debugger;
+                    //debugger;
+    const actualLink = document.getElementById('actual').querySelector('a');
+    const expectedLink = document.getElementById('expected').querySelector('a');
 
-                    // write me! (... without using cloneNode, that's kind of cheating)
+    // Change the 'href' attribute of the actual link
+    actualLink.href = expectedLink.href;
+
+    // Change the 'expected' attribute of the actual link
+    actualLink.setAttribute('expected', expectedLink.getAttribute('expected'));
+
+    // Change the 'innerText' of the actual link
+    actualLink.innerText = expectedLink.innerText;
+                    
                 </script>
             </div>
 

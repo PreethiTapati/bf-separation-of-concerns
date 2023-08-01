@@ -43,8 +43,41 @@
 
                 <script id="dom-manipulation-script">
                     'use strict';
-                    debugger;
+                    //debugger;
 
+                        // Create a new h1 element
+                            const header = document.createElement('h1');
+
+                            // Set content of the new h1 element
+                            header.innerText = 'a list of things';
+
+                            // Insert the new h1 element before the existing list
+                            const actual = document.getElementById('actual');
+                            actual.insertBefore(header, actual.firstChild);
+
+                            // creating an array for li 
+                 const listItems = [
+                 'robots',
+                 'solar systems',
+                 '<a href="https://www.badgerbadgerbadger.com" expected="_blank">learn about badgers</a>',
+                 'oil',
+             ];
+
+    // Create the "actual" list element
+    const actualList = document.createElement('ul');
+
+    // Loop through the array and create list items
+    listItems.forEach((item) => {
+        const listItem = document.createElement('li');
+        listItem.innerHTML = item; // Use innerHTML to include the anchor element as HTML
+        actualList.appendChild(listItem);
+    });
+
+    // Set the "start" attribute for the "actual" list to match the "expected" list
+    actualList.setAttribute('start', '0');
+
+    // Append the "actual" list to the "actual" div
+    document.getElementById('actual').appendChild(actualList);
                     // write me! (... without using cloneNode, that's kind of cheating)
                 </script>
             </div>

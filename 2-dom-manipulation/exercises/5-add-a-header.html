@@ -42,10 +42,23 @@
 
                 <script id="dom-manipulation-script">
                     'use strict';
-                    debugger;
+                    //debugger;
+                    
+                     // Create a new h1 element
+                        const header = document.createElement('h1');
 
-                    // write me! (... without using cloneNode, that's kind of cheating)
-                </script>
+                    // Set content of the new h1 element
+                        header.innerText = 'a list of things';
+                        
+                // Insert the new h1 element before the existing list
+                        const actual = document.getElementById('actual');
+                       actual.insertBefore(header, actual.firstChild);
+
+                       // change the second li 
+                       const liAll = document.querySelectorAll('#actual li');
+                       liAll[1].innerText = 'solar systems';
+                    
+                    </script>
             </div>
 
             <div id="mocha" class="mocha-output"></div>

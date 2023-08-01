@@ -20,7 +20,12 @@ console.log(divEl.nodeName, divEl.cloneNode(true));
 // --- write some code ---
 //  you will need to access and update each <td> element
 
-// --- --- --- --- --- ---
+const tbody = divEl.querySelector('tbody');
+const tds = tbody.querySelectorAll('td');
+
+tds.forEach((td, i) => {
+  td.textContent = String.fromCharCode(97 + i); 
+});
 
 console.log(divEl.nodeName, divEl.cloneNode(true));
 

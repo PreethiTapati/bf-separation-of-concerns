@@ -6,6 +6,8 @@ console.log('initial button:', buttonEl.cloneNode(true));
 
 const reverseInnerHTMLHandler = (event) => {
     // write code to reverse the target element's innerHTML
+    const text = event.target.innerHTML
+    event.target.innerHTML= text.split('').reverse().join('');
 };
 
 buttonEl.addEventListener('click', reverseInnerHTMLHandler);

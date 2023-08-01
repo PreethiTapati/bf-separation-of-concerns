@@ -1,8 +1,8 @@
 'use strict';
 
-const element = document.createElement('buton');
-element.innerHtml = 'go home';
-element.class = 'large-btn';
+const element = document.createElement('button');
+element.innerHTML = 'go home'; // Corrected property name to innerHTML
+element.className = 'large-btn'; // Corrected property name to className
 
 // the assertions are correct!  change the code above to pass them
 console.assert(element.nodeName === 'BUTTON', 'Test 1: nodeName');

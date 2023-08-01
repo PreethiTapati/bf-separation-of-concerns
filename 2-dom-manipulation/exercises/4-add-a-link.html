@@ -38,9 +38,20 @@
 
                 <script id="dom-manipulation-script">
                     'use strict';
-                    debugger;
+                    //debugger;
+    const expectedLink = document.getElementById('expected').querySelector('a');
 
-                    // write me! (... without using cloneNode, that's kind of cheating)
+    // Create a new anchor element
+    const actualLink = document.createElement('a');
+
+    // Set attributes of the new anchor element
+    actualLink.href = expectedLink.href;
+    actualLink.innerText = expectedLink.innerText;
+    actualLink.setAttribute('expected', expectedLink.getAttribute('expected'));
+
+    // Append the new anchor element to the "actual" div
+    document.getElementById('actual').appendChild(actualLink);
+                   
                 </script>
             </div>
 

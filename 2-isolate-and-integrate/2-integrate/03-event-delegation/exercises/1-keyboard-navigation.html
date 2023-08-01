@@ -149,14 +149,14 @@
                 debugger;
 
                 const target = event.target;
-                if (target.nodeName !== '_') {
+                if (target.nodeName !== 'button') {
                     return;
                 }
 
-                if (event.type === '_') {
+                if (event.type === 'focusing') {
                     target.style.backgroundColor = 'black';
                     target.style.color = 'white';
-                } else if (event.type === '_') {
+                } else if (event.type === 'focusout') {
                     target.style.backgroundColor = 'white';
                     target.style.color = 'black';
                 }
@@ -167,7 +167,7 @@
             // this works! no need to change it
             document
                 .getElementById('the-board')
-                .addEventListener('focusin', toggleColorHandler);
+                .addEventListener('focusing', toggleColorHandler);
 
             document
                 .getElementById('the-board')
